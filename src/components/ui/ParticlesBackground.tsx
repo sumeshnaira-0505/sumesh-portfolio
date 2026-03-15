@@ -47,7 +47,7 @@ export default function ParticlesBackground() {
             width: 1,
           },
           move: { enable: true, speed: 0.8, outModes: { default: 'bounce' } },
-          number: { value: 60, density: { enable: true, area: 800 } },
+          number: { value: 60, density: { enable: true, width: 800, height: 800 } },
           opacity: { value: 0.4 },
           shape: { type: 'circle' },
           size: { value: { min: 1, max: 3 } },

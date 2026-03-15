@@ -19,7 +19,7 @@ export default function BugSquasher() {
   const [bugs, setBugs] = useState<Bug[]>([])
   const [score, setScore] = useState(0)
   const [timeLeft, setTimeLeft] = useState(GAME_DURATION)
-  const [squashed, setSquashed] = useState<number[]>([])
+  const [_squashed, setSquashed] = useState<number[]>([])
   const [highScore, setHighScore] = useState(() => {
     try { return parseInt(localStorage.getItem('bugSquasherHigh') ?? '0', 10) } catch { return 0 }
   })
