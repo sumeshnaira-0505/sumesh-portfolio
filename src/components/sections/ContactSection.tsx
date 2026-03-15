@@ -3,8 +3,15 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion } from 'framer-motion'
 import { Send, Linkedin, Mail, Phone } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 import { Button } from '@/components/ui/button'
 import SectionHeading from '@/components/ui/SectionHeading'
+
+// ── EmailJS config ────────────────────────────────────────────────────────────
+// Replace these three values with your own from https://emailjs.com
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY'
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -48,9 +55,17 @@ export default function ContactSection() {
   } = useForm<ContactFormData>({ resolver: zodResolver(contactSchema) })
 
   const onSubmit = async (data: ContactFormData) => {
-    // TODO: wire up to EmailJS / Resend / Formspree
-    console.log('Form submitted:', data)
-    await new Promise((resolve) => setTimeout(resolve, 900))
+    await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        from_name:  data.name,
+        from_email: data.email,
+        subject:    data.subject,
+        message:    data.message,
+      },
+      EMAILJS_PUBLIC_KEY,
+    )
     reset()
   }
 
