@@ -5,7 +5,7 @@
  * intervals (staggered by `stagger` ms per position) before snapping to the
  * correct letter.  Trigger a new animation by toggling `trigger`.
  */
-import { useState, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 // Glyph pool used while scrambling
