@@ -5,7 +5,7 @@ import type { Metric } from 'web-vitals'
  * Swap `console.log` for your analytics provider (e.g. Google Analytics, Datadog).
  */
 export function reportWebVitals(metric: Metric): void {
-  if (import.meta.env.DEV) {
+  if (process.env.NODE_ENV !== 'production') {
     const color = metric.rating === 'good' ? '#22c55e' : metric.rating === 'needs-improvement' ? '#f59e0b' : '#ef4444'
     console.log(
       `%c[Web Vitals] ${metric.name}: ${Math.round(metric.value)}${metric.name === 'CLS' ? '' : 'ms'} (${metric.rating})`,

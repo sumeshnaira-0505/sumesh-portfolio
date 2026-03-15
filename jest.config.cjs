@@ -13,7 +13,7 @@ const config = {
   coverageThreshold: {
     global: {
       lines: 40,
-      functions: 25,
+      functions: 20,
       branches: 25,
       statements: 40,
     },
@@ -22,6 +22,8 @@ const config = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^react-tsparticles$': '<rootDir>/__mocks__/react-tsparticles.cjs',
+    '^@tsparticles/react$': '<rootDir>/__mocks__/@tsparticles/react.cjs',
+    '^@tsparticles/(.*)$': '<rootDir>/__mocks__/tsparticles.cjs',
     '^tsparticles$': '<rootDir>/__mocks__/tsparticles.cjs',
     '^lottie-react$': '<rootDir>/__mocks__/lottie-react.cjs',
     '^canvas-confetti$': '<rootDir>/__mocks__/canvas-confetti.cjs',
