@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumesh Nair — Portfolio</title>
+    <!-- GitHub Pages SPA routing: restore path encoded by 404.html -->
+    <script>
+      ;(function () {
+        var p = new URLSearchParams(window.location.search).get('p')
+        var h = new URLSearchParams(window.location.search).get('h')
+        if (p) window.history.replaceState(null, '', p + (h || ''))
+      })()
+    </script>
+    <!-- Prevent flash of wrong theme on load -->
+    <script>
+      ;(function () {
+        var stored = localStorage.getItem('theme')
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark')
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
