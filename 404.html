@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sumesh Nair A — Front-End Developer</title>
+    <script>
+      // GitHub Pages SPA redirect trick.
+      // Encodes the full path + query + hash into a single query param and
+      // sends the browser to the root index.html, which decodes it back.
+      var l = window.location
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1).join('/') +
+        '/?p=' + encodeURIComponent(l.pathname + l.search) +
+        (l.hash ? '&h=' + encodeURIComponent(l.hash) : '')
+      )
+    </script>
+  </head>
+  <body></body>
+</html>

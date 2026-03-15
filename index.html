@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/sumesh-portfolio/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumesh Nair — Portfolio</title>
+    <!-- GitHub Pages SPA routing: restore path encoded by 404.html -->
+    <script>
+      ;(function () {
+        var p = new URLSearchParams(window.location.search).get('p')
+        var h = new URLSearchParams(window.location.search).get('h')
+        if (p) window.history.replaceState(null, '', p + (h || ''))
+      })()
+    </script>
+    <!-- Prevent flash of wrong theme on load -->
+    <script>
+      ;(function () {
+        var stored = localStorage.getItem('theme')
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark')
+        }
+      })()
+    </script>
+    <script type="module" crossorigin src="/sumesh-portfolio/assets/index-7tlMM_1v.js"></script>
+    <link rel="modulepreload" crossorigin href="/sumesh-portfolio/assets/proxy-Ps_VM2WV.js">
+    <link rel="modulepreload" crossorigin href="/sumesh-portfolio/assets/createLucideIcon-gdYPEeJ7.js">
+    <link rel="stylesheet" crossorigin href="/sumesh-portfolio/assets/index-BNhWZCbu.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
