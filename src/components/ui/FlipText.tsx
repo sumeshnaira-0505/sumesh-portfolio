@@ -5,7 +5,7 @@
  * intervals (staggered by `stagger` ms per position) before snapping to the
  * correct letter.  Trigger a new animation by toggling `trigger`.
  */
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 // Glyph pool used while scrambling
@@ -78,8 +78,8 @@ function FlipChar({ target, triggerKey, delay, speed, flipCount }: FlipCharProps
 
 export interface FlipTextProps {
   text: string
-  /** Flip when this flips to true. Reset to false externally to allow re-trigger. */
-  trigger: boolean
+  /** Increment to re-trigger the scramble. Managed by the parent. */
+  triggerKey: number
   /** Milliseconds between glyph changes while scrambling (default 50) */
   speed?: number
   /** Milliseconds added per character position for stagger (default 60) */
@@ -91,18 +91,12 @@ export interface FlipTextProps {
 
 export default function FlipText({
   text,
-  trigger,
+  triggerKey,
   speed    = 50,
   stagger  = 60,
   flipCount = 9,
   className = '',
 }: FlipTextProps) {
-  const [triggerKey, setTriggerKey] = useState(0)
-
-  useEffect(() => {
-    if (trigger) setTriggerKey(k => k + 1)
-  }, [trigger])
-
   return (
     <span className={`inline-flex ${className}`} aria-label={text}>
       {text.split('').map((char, i) => (

@@ -19,7 +19,6 @@ export default function BugSquasher() {
   const [bugs, setBugs] = useState<Bug[]>([])
   const [score, setScore] = useState(0)
   const [timeLeft, setTimeLeft] = useState(GAME_DURATION)
-  const [_squashed, setSquashed] = useState<number[]>([])
   const [highScore, setHighScore] = useState(() => {
     try { return parseInt(localStorage.getItem('bugSquasherHigh') ?? '0', 10) } catch { return 0 }
   })
@@ -47,16 +46,13 @@ export default function BugSquasher() {
   const startGame = useCallback(() => {
     setBugs([])
     setScore(0)
-    setSquashed([])
     setTimeLeft(GAME_DURATION)
     setPhase('playing')
   }, [])
 
   const squash = useCallback((id: number) => {
-    setSquashed((prev) => [...prev, id])
     setBugs((prev) => prev.filter((b) => b.id !== id))
     setScore((s) => s + 1)
-    setTimeout(() => setSquashed((prev) => prev.filter((x) => x !== id)), 350)
   }, [])
 
   // Countdown
