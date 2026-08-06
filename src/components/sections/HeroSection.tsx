@@ -16,7 +16,7 @@ const ROLES = [
 
 const SOCIAL_LINKS = [
   { icon: Github, href: 'https://github.com/sumeshnaira-0505', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/sumesh-nair-a-107sms0505', label: 'LinkedIn' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/sumesh-nair-a-107sms0505/', label: 'LinkedIn' },
   { icon: Mail, href: 'mailto:sumeshnaira@gmail.com', label: 'Email' },
   { icon: Phone, href: 'tel:+916381474524', label: 'Phone' },
 ]
@@ -63,7 +63,7 @@ export default function HeroSection() {
           className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-card text-sm text-muted-foreground mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          4.8+ years · Angular &amp; TypeScript · Chennai, India
+          5+ years · Angular, TypeScript &amp; Full-Stack · Chennai, India
         </motion.div>
 
         <motion.h1
@@ -94,8 +94,9 @@ export default function HeroSection() {
           className="text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
         >
           I build scalable Angular applications with a strong focus on performance, reusability, and
-          clean code. 4.8+ years delivering enterprise-grade solutions across healthcare, government,
-          and commercial domains.
+          clean code. 5+ years delivering enterprise-grade solutions across healthcare, government,
+          and business domains — with hands-on full-stack experience in NestJS, Node.js, and
+          PostgreSQL.
         </motion.p>
 
         {/* CTAs */}

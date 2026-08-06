@@ -2,14 +2,15 @@ import { motion } from 'framer-motion'
 import type { Skill } from '@/types'
 import SectionHeading from '@/components/ui/SectionHeading'
 
-const SKILLS: Skill[] = [
+export const SKILLS: Skill[] = [
   // Core Frontend Technologies
   { name: 'Angular (v2+)', category: 'frontend', level: 'expert' },
   { name: 'TypeScript', category: 'frontend', level: 'expert' },
   { name: 'JavaScript (ES6+)', category: 'frontend', level: 'expert' },
   { name: 'HTML5 / CSS3', category: 'frontend', level: 'expert' },
-  { name: 'SCSS / SASS', category: 'frontend', level: 'advanced' },
-  { name: 'React', category: 'frontend', level: 'advanced' },
+  { name: 'SCSS / SASS', category: 'frontend', level: 'expert' },
+  { name: 'React', category: 'frontend', level: 'beginner' },
+  { name: 'jQuery', category: 'frontend', level: 'intermediate' },
   // UI Libraries & Data Visualization
   { name: 'Angular Material', category: 'libraries', level: 'advanced' },
   { name: 'PrimeNG', category: 'libraries', level: 'advanced' },
@@ -19,26 +20,47 @@ const SKILLS: Skill[] = [
   { name: 'Syncfusion', category: 'libraries', level: 'intermediate' },
   { name: 'Highcharts', category: 'libraries', level: 'advanced' },
   { name: 'ApexCharts', category: 'libraries', level: 'advanced' },
-  { name: 'Chart.js', category: 'libraries', level: 'intermediate' },
+  { name: 'Chart.js', category: 'libraries', level: 'advanced' },
+  { name: 'FullCalendar', category: 'libraries', level: 'advanced' },
+  // Backend & Database
+  { name: 'NestJS', category: 'backend', level: 'intermediate' },
+  { name: 'Node.js', category: 'backend', level: 'intermediate' },
+  { name: 'Express.js', category: 'backend', level: 'intermediate' },
+  { name: 'PostgreSQL', category: 'backend', level: 'intermediate' },
+  { name: 'TypeORM', category: 'backend', level: 'intermediate' },
+  { name: 'Microservices Architecture', category: 'backend', level: 'advanced' },
+  { name: 'API Gateway', category: 'backend', level: 'advanced' },
+  { name: 'Swagger / OpenAPI', category: 'backend', level: 'advanced' },
+  { name: 'Axios', category: 'backend', level: 'advanced' },
+  { name: 'Docker', category: 'backend', level: 'advanced' },
   // Integrations & Services
   { name: 'RESTful APIs', category: 'integrations', level: 'expert' },
   { name: 'Socket.IO', category: 'integrations', level: 'advanced' },
   { name: 'AWS Cognito', category: 'integrations', level: 'advanced' },
   { name: 'SAML Integration', category: 'integrations', level: 'advanced' },
+  { name: 'JWT Authentication', category: 'integrations', level: 'advanced' },
   { name: 'Stripe Payments', category: 'integrations', level: 'advanced' },
   { name: 'Twilio SMS', category: 'integrations', level: 'intermediate' },
   { name: 'Jitsi', category: 'integrations', level: 'intermediate' },
   { name: 'OnlyOffice', category: 'integrations', level: 'intermediate' },
+  { name: 'Superset', category: 'integrations', level: 'intermediate' },
+  { name: 'Miniature Earth', category: 'integrations', level: 'intermediate' },
+  { name: 'Encryption / Decryption', category: 'integrations', level: 'advanced' },
+  { name: 'API Rate Limiting', category: 'integrations', level: 'intermediate' },
   // Tools & Workflow
   { name: 'Git', category: 'tools', level: 'expert' },
   { name: 'Figma', category: 'tools', level: 'intermediate' },
-  { name: 'Jira', category: 'tools', level: 'intermediate' },
+  { name: 'Jira', category: 'tools', level: 'expert' },
   { name: 'Responsive Design', category: 'tools', level: 'expert' },
+  { name: 'jsPDF', category: 'tools', level: 'intermediate' },
+  { name: 'DTO Validation', category: 'tools', level: 'intermediate' },
+  { name: 'Environment Configuration', category: 'tools', level: 'advanced' },
 ]
 
 const CATEGORIES: { key: Skill['category']; label: string; emoji: string }[] = [
   { key: 'frontend', label: 'Core Technologies', emoji: '⚡' },
   { key: 'libraries', label: 'UI Libraries & Visualization', emoji: '🎨' },
+  { key: 'backend', label: 'Backend & Database', emoji: '🖥️' },
   { key: 'integrations', label: 'Integrations & APIs', emoji: '🔌' },
   { key: 'tools', label: 'Tools & Workflow', emoji: '🛠️' },
 ]
@@ -50,7 +72,7 @@ const LEVEL_STYLES: Record<Skill['level'], string> = {
   advanced:
     'bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200/50 dark:border-emerald-800/50',
   expert:
-    'bg-primary/10 text-primary border border-primary/20 font-semibold',
+    'bg-amber-100 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300 border border-amber-200/50 dark:border-amber-800/50 font-semibold',
 }
 
 const LEVEL_LABELS: Record<Skill['level'], string> = {
@@ -66,7 +88,7 @@ export default function SkillsSection() {
       <div className="max-w-4xl mx-auto">
         <SectionHeading
           title="Skills"
-          subtitle="Technologies and tools I work with daily across frontend development and integrations."
+          subtitle="Technologies and tools I work with across frontend development, backend services, and integrations."
         />
 
         {/* Legend */}

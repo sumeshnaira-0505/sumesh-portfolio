@@ -13,7 +13,7 @@ interface Project {
   color: string
 }
 
-const PROJECTS: Project[] = [
+export const PROJECTS: Project[] = [
   {
     id: '1',
     title: 'TAC Healthcare Application',
@@ -21,8 +21,8 @@ const PROJECTS: Project[] = [
     domain: 'Healthcare',
     color: '#3b82f6',
     description:
-      'Enterprise healthcare management platform with real-time patient data, appointment scheduling, dynamic reporting dashboards, and live collaboration features.',
-    techStack: ['Angular', 'TypeScript', 'PrimeNG', 'AG-Grid', 'Chart.js', 'Socket.IO', 'Jitsi'],
+      'Enterprise clinic management platform built on an Angular front end and a NestJS microservices backend (API Gateway, Patient, Appointment, Form Builder, Superset, Wellness services) — real-time patient records, appointment scheduling, dynamic FormioJS intake forms, embedded Superset dashboards, and Twilio-powered collaboration.',
+    techStack: ['Angular', 'TypeScript', 'NestJS', 'PostgreSQL', 'PrimeNG', 'FormioJS', 'Twilio', 'Superset'],
   },
   {
     id: '2',
@@ -41,8 +41,8 @@ const PROJECTS: Project[] = [
     domain: 'Government',
     color: '#a855f7',
     description:
-      'Enterprise Case Management System for Indiana Department of Child Services. Complex multi-step workflows, role-based access, data grids, and integrated document handling.',
-    techStack: ['Angular', 'TypeScript', 'AG-Grid', 'Highcharts', 'RESTful APIs', 'Bootstrap'],
+      'Enterprise Case Management System for Indiana Department of Child Services — form-builder driven applications, document and training-content management with OnlyOffice in-browser editing, real-time notifications via Socket.IO, a FullCalendar scheduling module, and multi-language (i18n) support, packaged as an installable PWA.',
+    techStack: ['Angular', 'TypeScript', 'FullCalendar', 'Socket.IO', 'OnlyOffice', 'ngx-bootstrap'],
   },
   {
     id: '4',
@@ -51,8 +51,8 @@ const PROJECTS: Project[] = [
     domain: 'Corporate',
     color: '#f59e0b',
     description:
-      'Modern corporate website with pixel-perfect responsive design, SEO-optimised structure, animated UI components, and CMS-driven content management.',
-    techStack: ['Angular', 'TypeScript', 'Angular Material', 'SCSS', 'Responsive Design'],
+      'Marketing website for NextG — home, about, and team pages with an animated header/footer, newsletter subscribe capture, and scroll-to-top UX, built as a lightweight custom Angular app with pixel-perfect responsive SCSS styling.',
+    techStack: ['Angular', 'TypeScript', 'SCSS', 'Responsive Design'],
   },
   {
     id: '5',
@@ -61,18 +61,18 @@ const PROJECTS: Project[] = [
     domain: 'Digital Estate Planning',
     color: '#f43f5e',
     description:
-      'A post-mortem digital estate platform where individuals securely store personal documents, media, and sensitive information, then configure granular access rules — specifying exactly who can view, receive, or manage each asset after their passing.',
-    techStack: ['Angular', 'TypeScript', 'Stripe', 'Twilio', 'Socket.IO', 'AWS Cognito'],
+      'A post-mortem digital estate platform (EchoSafe) where individuals record video/audio messages, journals, and funeral instructions, then configure granular recipient rules through author and receiver request flows — specifying exactly who receives each asset after their passing, with subscription billing via Stripe.',
+    techStack: ['Angular', 'TypeScript', 'Angular Material', 'Stripe', 'RecordRTC', 'Syncfusion Rich Text Editor'],
   },
   {
     id: '6',
     title: 'Thereafter Website',
     client: 'Particle Black India',
-    domain: 'Platform',
+    domain: 'Marketing',
     color: '#06b6d4',
     description:
-      'Multi-functional web platform featuring user authentication via AWS Cognito, real-time communication, integrated collaboration tools, and advanced charting and analytics.',
-    techStack: ['Angular', 'TypeScript', 'AWS Cognito', 'Socket.IO', 'OnlyOffice', 'Superset'],
+      'Public marketing site for Thereafter — home, about, product, security, and pricing pages explaining the platform’s post-mortem digital estate planning and encryption/security practices, built with a responsive Bootstrap layout and Slick carousels.',
+    techStack: ['HTML5', 'Bootstrap', 'jQuery', 'Slick Carousel', 'CSS3'],
   },
   {
     id: '7',
@@ -83,6 +83,36 @@ const PROJECTS: Project[] = [
     description:
       'Company flagship website for Particle Black India — showcasing services, team, and portfolio with polished animations, performance-optimised assets, and a responsive layout.',
     techStack: ['Angular', 'TypeScript', 'Angular Material', 'SCSS', 'ApexCharts'],
+  },
+  {
+    id: '8',
+    title: 'PropStream Web Client',
+    client: 'Cardinality.ai',
+    domain: 'Real Estate / PropTech',
+    color: '#84cc16',
+    description:
+      'Enterprise real-estate data platform for property search and investor tooling — skip-traced contacts, marketing campaigns, ADU and rehab cost calculators, and property intelligence scoring, built on interactive Google Maps views and AG-Grid Enterprise data tables.',
+    techStack: ['React', 'Redux', 'Redux-Form', 'AG-Grid Enterprise', 'Google Maps API', 'Formik', 'Yup', 'SCSS'],
+  },
+  {
+    id: '9',
+    title: 'TAC Data Export Tool',
+    client: 'Particle Black India',
+    domain: 'Healthcare / Internal Tooling',
+    color: '#ec4899',
+    description:
+      'Internal data-export utility for the TAC Healthcare platform — pulls Form Builder submissions, patient records, appointment data, and uploaded files per client organisation, with one-click export from a Formio-driven interface.',
+    techStack: ['React', 'Vite', 'Material UI', 'Formio React', 'jsPDF', 'Axios'],
+  },
+  {
+    id: '10',
+    title: 'iCOSHH — Chemical Safety Platform',
+    client: 'Freelance Work',
+    domain: 'EHS / Compliance',
+    color: '#14b8a6',
+    description:
+      'Enterprise chemical safety and compliance platform for managing hazardous-substance inventories, Safety Data Sheets (SDS), risk assessments, and multi-step approval workflows — built on an Angular front end with a NestJS/TypeORM backend and S3-backed document storage.',
+    techStack: ['Angular', 'TypeScript', 'NestJS', 'PostgreSQL', 'TypeORM', 'AWS S3'],
   },
 ]
 

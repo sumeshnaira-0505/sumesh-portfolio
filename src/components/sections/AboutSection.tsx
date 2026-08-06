@@ -5,12 +5,15 @@ import { Download, MapPin, GraduationCap, Building2, BookOpen, FlaskConical } fr
 import { buttonVariants } from '@/components/ui/button'
 import LottieAnimation from '@/components/ui/LottieAnimation'
 import SectionHeading from '@/components/ui/SectionHeading'
+import { SKILLS } from '@/components/sections/SkillsSection'
+import { PROJECTS } from '@/components/sections/ProjectsSection'
+import { CERTIFICATES } from '@/pages/CertificatesPage'
 
 const STATS = [
-  { label: 'Years Experience', value: 4.8, decimals: 1, suffix: '+', percentage: 80, color: '#a855f7' },
-  { label: 'Projects Delivered', value: 7,   decimals: 0, suffix: '+', percentage: 70, color: '#10b981' },
-  { label: 'Technologies',       value: 25,  decimals: 0, suffix: '+', percentage: 83, color: '#3b82f6' },
-  { label: 'Certifications',     value: 13,  decimals: 0, suffix: '',  percentage: 87, color: '#f59e0b' },
+  { label: 'Years Experience', value: 5,   decimals: 0, suffix: '+', percentage: 83, color: '#a855f7' },
+  { label: 'Projects Delivered', value: PROJECTS.length, decimals: 0, suffix: '+', percentage: 70, color: '#10b981' },
+  { label: 'Technologies',       value: SKILLS.length,       decimals: 0, suffix: '+', percentage: 90, color: '#3b82f6' },
+  { label: 'Certifications',     value: CERTIFICATES.length, decimals: 0, suffix: '',  percentage: 87, color: '#f59e0b' },
 ]
 
 const EDUCATION = [
@@ -52,43 +55,38 @@ const EXPERIENCE = [
     location: 'Chennai, Tamilnadu',
     current: true,
     bullets: [
-      'Developed and maintained scalable Angular (v2+) applications using TypeScript, improving UI maintainability by 30% and reducing code duplication by 25%.',
-      'Designed responsive, cross-browser UIs using Angular Material, PrimeNG, and Syncfusion — improving device compatibility by 35%.',
-      'Integrated Stripe Payments, Twilio SMS, SAML, and AWS Cognito for secure, end-to-end functionality.',
-      'Built real-time features using Socket.IO; integrated Jitsi for collaboration and OnlyOffice for document editing.',
-      'Delivered dynamic dashboards and reporting modules using Highcharts, ApexCharts, Chart.js, and Superset.',
-      'Resolved production bottlenecks and UI defects, reducing UI-related bugs by 40%.',
+      'Developed and maintained scalable Angular (v2+) applications using TypeScript, implementing modular and reusable components that improved UI maintainability by 30% and reduced code duplication by 25%.',
+      'Designed responsive, cross-browser compatible UIs using HTML5, CSS3, SCSS, and Angular Material, improving compatibility across devices by 35%.',
+      'Integrated secure third-party services including Stripe Payment APIs and Twilio SMS APIs, and implemented authentication using SAML and AWS Cognito.',
+      'Implemented real-time features using Socket.IO and integrated collaboration tools such as Jitsi and OnlyOffice.',
+      'Built dynamic dashboards and reporting modules using Highcharts, ApexCharts, Chart.js, and Superset.',
+      'Developed dynamic form solutions using FormioJS, advanced data grids with AG-Grid, and enterprise UI components with PrimeNG and Syncfusion.',
+      'Developed and maintained backend services using NestJS, Node.js, and TypeScript, building RESTful APIs and microservice-based solutions.',
+      'Designed API Gateway integrations and implemented secure authentication and authorization using JWT and Passport.js.',
+      'Built database-driven features using PostgreSQL and TypeORM, including entity modeling, data validation, and API integration.',
+      'Created API documentation using Swagger/OpenAPI and containerized services using Docker for consistent development and deployment workflows.',
+      'Optimized application performance, debugging production issues and resolving bottlenecks, reducing UI-related defects by 40%.',
+      'Collaborated within Agile/Scrum environments, participating in requirement analysis, sprint planning, and client discussions to deliver high-quality solutions.',
     ],
     projects: ['TAC Healthcare', 'Child Welfare — Wyoming', 'ECMS — Indiana DCS', 'NextG Website', 'Passing Porter', 'Thereafter Website', 'PB Website'],
   },
   {
-    company: 'Elixir Softlab Solutions Pvt. Ltd.',
+    company: 'Elixir Softlab Solutions Pvt. Ltd. (Cardinality.ai)',
     role: 'Junior Software Developer',
-    period: '2020 – 2022',
+    period: 'Jul 2021 – May 2022',
     location: 'Chennai, Tamilnadu',
     current: false,
     bullets: [
-      'Accelerated Angular feature delivery by 20% through structured development and testing cycles.',
-      'Achieved 100% design compliance converting wireframes to responsive UIs.',
-      'Integrated RESTful APIs ensuring seamless data flow and stability.',
-      'Designed reusable UI component libraries, reducing development effort by 25%.',
-      'Implemented on-page SEO and UI structure optimisation for better visibility.',
-      'Gained CI/CD pipeline experience and applied async techniques within Agile sprints.',
+      'Accelerated Angular feature delivery by ~20% through efficient development and testing practices.',
+      'Achieved 100% design compliance by converting wireframes into fully responsive UIs.',
+      'Integrated RESTful APIs, ensuring stable and seamless data flow across applications.',
+      'Implemented on-page SEO and UI structure optimization, improving visibility and usability.',
+      'Designed reusable UI components/libraries, reducing development effort by ~25%.',
+      'Built and maintained unit/integration tests and contributed to technical documentation for better maintainability.',
+      'Gained hands-on experience with CI/CD pipelines, supporting automated builds and deployments.',
+      'Applied async programming, code reviews, and Agile practices to improve performance and code quality.',
     ],
-    projects: ['ECMS Application — Indiana Department of Child Support'],
-  },
-  {
-    company: 'Aegis Customer Support Services Pvt. Ltd.',
-    role: 'Senior Executive – Operations',
-    period: 'Jul 2019 – Oct 2020',
-    location: 'Chennai, Tamilnadu',
-    current: false,
-    bullets: [
-      'Handled customer inquiries via email/chat with 100% script adherence and 95%+ quality scores.',
-      'Managed complaints and built customer loyalty through active listening and proactive engagement.',
-      'Maintained detailed CRM records and collaborated with technical, sales, and product teams.',
-    ],
-    projects: [],
+    projects: ['PropStream Web Client'],
   },
 ]
 
@@ -311,17 +309,19 @@ export default function AboutSection() {
         >
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed text-lg">
-              I&apos;m <strong className="text-foreground">Sumesh Nair A</strong>, a Software
-              Developer with 4.8+ years of experience designing and delivering scalable Angular
-              applications. I specialise in TypeScript, JavaScript (ES6+), HTML5, and CSS3, with
-              hands-on expertise integrating RESTful APIs and building secure, high-performance user
-              interfaces.
+              I&apos;m <strong className="text-foreground">Sumesh Nair A</strong>, a Senior
+              Software Engineer with 5+ years of experience building scalable, high-performance web
+              applications using Angular, TypeScript, JavaScript (ES6+), HTML5, and CSS3. I&apos;m
+              experienced in developing responsive user interfaces, integrating RESTful APIs, and
+              delivering enterprise-grade solutions across healthcare, government, and business
+              domains.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I hold a Master&apos;s degree in Computer Science and a background in Communications,
-              enabling effective collaboration with both technical teams and client stakeholders.
-              I&apos;ve delivered enterprise solutions across healthcare, government, and commercial
-              domains — always focused on maintainability, performance, and clean code.
+              I also bring hands-on experience with NestJS, Node.js, PostgreSQL, TypeORM,
+              Microservices, API Gateway, JWT Authentication, and Docker, enabling effective
+              collaboration across full-stack development initiatives. I hold a Master&apos;s degree
+              in Computer Science and a background in Communications, and I&apos;m a strong advocate
+              of clean code, Agile methodologies, and cross-functional teamwork.
             </p>
 
             <ul className="space-y-3">

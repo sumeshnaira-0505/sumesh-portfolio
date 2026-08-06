@@ -20,7 +20,7 @@ function LinkedInIcon({ size = 16 }: { size?: number }) {
 
 const SOCIAL = [
   { icon: GitHubIcon, href: 'https://github.com/sumeshnaira-0505', label: 'GitHub' },
-  { icon: LinkedInIcon, href: 'https://www.linkedin.com/in/sumesh-nair-a-107sms0505', label: 'LinkedIn' },
+  { icon: LinkedInIcon, href: 'https://www.linkedin.com/in/sumesh-nair-a-107sms0505/', label: 'LinkedIn' },
   { icon: Mail, href: 'mailto:sumeshnaira@gmail.com', label: 'Email' },
   { icon: Phone, href: 'tel:+916381474524', label: 'Phone' },
 ]
@@ -57,8 +57,8 @@ export default function Footer() {
           <div>
             <p className="font-bold text-lg mb-2">Sumesh Nair A</p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Front-End Developer specialising in Angular &amp; TypeScript — building scalable,
-              high-performance web applications.
+              Senior Software Engineer specialising in Angular, TypeScript &amp; full-stack
+              development — building scalable, high-performance web applications.
             </p>
           </div>
 

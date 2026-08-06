@@ -11,6 +11,6 @@ export interface Project {
 
 export interface Skill {
   name: string
-  category: 'frontend' | 'libraries' | 'integrations' | 'tools'
+  category: 'frontend' | 'libraries' | 'backend' | 'integrations' | 'tools'
   level: 'beginner' | 'intermediate' | 'advanced' | 'expert'
 }

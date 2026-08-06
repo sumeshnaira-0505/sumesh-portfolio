@@ -42,7 +42,7 @@ const CONTACT_INFO = [
     icon: Linkedin,
     label: 'LinkedIn',
     value: 'linkedin.com/in/sumesh-nair-a',
-    href: 'https://www.linkedin.com/in/sumesh-nair-a-107sms0505',
+    href: 'https://www.linkedin.com/in/sumesh-nair-a-107sms0505/',
   },
 ]
 
