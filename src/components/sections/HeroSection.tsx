@@ -11,7 +11,8 @@ const ROLES = [
   'Front-End Developer',
   'Angular Specialist',
   'TypeScript Expert',
-  'UI/UX Developer',
+  'Full-Stack Developer',
+  'Backend Engineer (NestJS)',
 ]
 
 const SOCIAL_LINKS = [
