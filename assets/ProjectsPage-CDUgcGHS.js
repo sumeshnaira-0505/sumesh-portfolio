@@ -1,0 +1,1 @@
+import{d as e,u as t}from"./proxy-Ps_VM2WV.js";import{n}from"./ProjectsSection-Dx7-rv-D.js";import"./SectionHeading-DJoPD6ja.js";import{t as r}from"./PageTransition-Be7T6C6g.js";var i=t(),a=e();function o(){let e=(0,i.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,a.jsx)(r,{children:(0,a.jsx)(n,{})}),e[0]=t):t=e[0],t}export{o as default};
