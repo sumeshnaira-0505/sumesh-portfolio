@@ -1,0 +1,1 @@
+import"./proxy-Ps_VM2WV.js";import"./SectionHeading-DJoPD6ja.js";import{n as e,t}from"./CertificatesPage-qhKZMJdx.js";import"./PageTransition-Be7T6C6g.js";export{t as CERTIFICATES,e as default};
